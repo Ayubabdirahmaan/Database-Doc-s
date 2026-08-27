@@ -1,4 +1,4 @@
-========================== Database ==========================================
+ ==========================================Database==========================================
 Database: is a collection of related data that are organized and stored in well manner.
 
 SQL: Structued Query Language: is a language that we communicate to create, add, modify, or access database.
@@ -17,7 +17,7 @@ ayb
 2. Data Isolation: 
 3. Data Security
 
-====================Data Models: Designing your database logically is known us data models.
+============================Data Models: Designing your database logically is known us data models.
 1. Object  Model: MangoDb
 2. Hierarchical Modal:
 3. Network Modal:
