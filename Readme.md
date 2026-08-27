@@ -1,5 +1,5 @@
  ==========================================Database==========================================
-##Database: is a collection of related data that are organized and stored in well manner.
+Database: is a collection of related data that are organized and stored in well manner.
 
 SQL: Structued Query Language: is a language that we communicate to create, add, modify, or access database.
 DMBS: is a software tool uses to build database.
