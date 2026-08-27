@@ -45,7 +45,6 @@ Database Objects:
 1) unique
 2) not editable
 3) not null
-
 {name,tell,sex,birth_date,passport,email,Niro}
 
 
