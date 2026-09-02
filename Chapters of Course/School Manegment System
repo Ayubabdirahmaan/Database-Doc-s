@@ -1,0 +1,62 @@
+
+school{student,employee,attendence,exam,finance,..}
+1NF:
+1. atomic: 
+2. no reporting group of related data.
+student{name,tell,sex,birth_date,p_birth,mother,...,.., class}
+responsible{res_no(pk),res_name,res_tell}
+address{district,village,area}
+jobs{title,salary}
+specilization{sp_name,description}
+degree{dg_name}
+employee{name,tell,sex,......,..,....}
+2NF:
+1. 1NF
+2. Entity integrity & referential integrity
+1. student{id(pk),name,tell,sex,birth_date,p_birth,mother,res_no(fk),add_no(fk), ...}
+2. responsible{res_no(pk),res_name,res_tell}
+3. address{add_no(pk),district,village,area}
+4. jobs{job_no(pk),title,salary}
+5. specilization{sp_no(pk),sp_name,description}
+6. degree{dg_no(pk),dg_name}
+7. employee{emp_no(pk),name,tell,sex,job_no(fk).,sp_no(fk),dg_no(fk),add_no(Fk)}
+
+3NF:
+1. 2NF
+2. Changible column
+8. levels{lev_no(pk),lev_name,price}
+		1 			d/hose 	10
+		2 			d/dhexe 15
+		3 			d/sare 	20
+9. class{cl_no(pk),cl_name,lev_no(fk)}
+		1 		Form1		3
+10. class_type{ct_no(pk),cl_no(fk),type,description}
+			1 			1  		A 		male
+			2 			1 		B 		Female
+..
+11. academic_year{y_no(pk),y_name,started,ended}
+				1 		2023-2024
+				2 		2024-2025
+				3 		2025-2026
+				4 		2026-2027
+12. student_Class{sc_no(pk),ct_no(fk),id(fk),y_no(fk)}
+				1 			1 	 	4	 	4
+
+13. subjects{sub_no(pk),sub_name,description}
+14. Subject_class{sbc_no(pk),sub_no(fk),ct_no(fk)}
+15. Pre_schedule{Prs_no(pk),sbc_no(fk),emp_no(fk),y_no(fk),period_per_week}
+16. days{dy_no(pk),dy_name,start_day,num_days}
+17. periods{per_no(pk),per_name,time_in,time_out}
+18. Schedule{sch_no(pk),prs_no(fk),dy_no(fk),per_no(fk),y_no(fk)}
+
+attendence{student_attendence,teacher}
+19. attendence_status{st_no(pk),st_name}
+					1. 		present
+					2. 		absent
+					3.		late
+					4. 		sick
+					5. 		vocation
+20. student_attendence{att_no(pk),sch_no(fk),st_no(fk),description,att_date_time}
+21. employee_attendence{att_no(pk),emp_no(fk),att_date,time_in,time_out,y_no(fk)}
+
+22. employee_status{emp_st_no(pk),emp_no(Fk),description,started,ended}
