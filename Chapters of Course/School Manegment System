@@ -1,4 +1,3 @@
-
 school{student,employee,attendence,exam,finance,..}
 1NF:
 1. atomic: 
